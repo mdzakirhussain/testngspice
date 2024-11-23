@@ -1,3 +1,8 @@
+##update os
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install -y build-essential python3 python3-venv make git
+
 ##ngspice dependencies
 sudo apt-get install build-essential --assume-yes
 sudo apt-get install automake libtool gperf flex bison --assume-yes
