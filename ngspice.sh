@@ -1,7 +1,7 @@
 ##update os
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt install -y build-essential python3 python3-venv make git
+sudo apt-get update  --assume-yes
+sudo apt-get upgrade  --assume-yes
+sudo apt install -y build-essential python3 python3-venv make git  --assume-yes
 
 ##ngspice dependencies
 sudo apt-get install build-essential --assume-yes
@@ -9,6 +9,7 @@ sudo apt-get install automake libtool gperf flex bison --assume-yes
 sudo apt-get install libxml2 libxml2-dev --assume-yes
 sudo apt-get install libxml-libxml-perl --assume-yes
 sudo apt-get install libgd-perl --assume-yes
+
 ##ngspice dependencies
 sudo apt-get install -y libxaw7-dev --assume-yes
 sudo apt-get install -y libreadline-dev --assume-yes
@@ -17,7 +18,9 @@ sudo apt-get install -y xterm --assume-yes
 
 sudo apt install vim-gtk3 --assume-yes
 sudo apt-get install -y xterm --assume-yes
-cd 
+
+cd
+
 ##ADMS required for ngspice
 git clone https://github.com/Qucs/ADMS.git adms
 cd adms
@@ -25,6 +28,7 @@ cd adms
 ./configure --prefix=/home/codespace/adms
 make
 sudo make install
+
 cd
 
 ##ngspice
@@ -38,4 +42,5 @@ cd release
 ../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp --prefix=/home/codespace/ngspice
 make
 sudo make install
+
 cd
