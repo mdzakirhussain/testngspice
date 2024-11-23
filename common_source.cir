@@ -1,0 +1,21 @@
+.include 130nm_bulk.pm.txt
+
+******Netlist part*********
+VDD net1 GND 1.5
+RD net1 vout 10k
+VG vin GND 0.6
+** M1 Drain Gate Source Substrate
+M1 vout vin GND GND NMOS W=1u L=130n
+
+*****Analysis*******
+
+.control
+
+****DC Analysis*****
+op
+print @M1[id]
+print @M1[gm]
+print v(vout)
+
+.endc
+.end

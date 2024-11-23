@@ -1,0 +1,1 @@
+/home/codespace/ngspice/release/src/ngspice
