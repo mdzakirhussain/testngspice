@@ -39,7 +39,7 @@ git checkout pre-master
 ./autogen.sh ../adms/
 mkdir release
 cd release
-../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp --prefix=/home/codespace/ngspice
+../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp  --enable-adms --enable-pss --prefix=/home/codespace/ngspice
 make
 sudo make install
 
